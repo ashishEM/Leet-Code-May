@@ -1,33 +1,28 @@
+import java.util.ArrayList;
+
 public class May3
 {
-    public static void main (String[] args)
-    {
-        String Rn= "asfjk";
-        String Mg = "aggegd";
-        System.out.printf(Rn,Mg);
+    public static void main (String[] args){
+
     }
-
-    public boolean canConstruct(String ransomNote, String magazine)
+    public static boolean canConstruct(String ransomNote, String magazine)
     {
-        char[] Rn = ransomNote.toCharArray();
-        char[] Mg = magazine.toCharArray();
-
-
-        for(int i=1;i<Rn.length;i++)
-        {
-            for (int j=1;j<Mg.length;j++)
-            {
-                if (Rn[i] == Mg[j])
-                {
-
-                    magazine.substring();
-                }
+        // For each character, c,  in the ransom note.
+        for (char c : ransomNote.toCharArray()) {
+            // Find the index of the first occurrence of c in the magazine.
+            int index = magazine.indexOf(c);
+            // If there are none of c left in the String, return False.
+            if (index == -1) {
+                return false;
             }
+            // Use substring to make a new string with the characters
+            // before "index" (but not including), and the characters
+            // after "index".
+            magazine = magazine.substring(0, index) + magazine.substring(index + 1);
         }
+        // If we got this far, we can successfully build the note.
+        return true;
 
-
-;
     }
-
 
 }
