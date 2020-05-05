@@ -15,6 +15,7 @@ public class May3
             if (index == -1) {
                 return false;
             }
+
             // Use substring to make a new string with the characters
             // before "index" (but not including), and the characters
             // after "index".
