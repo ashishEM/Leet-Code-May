@@ -6,7 +6,7 @@ public class May7
     public static void  main(String [] args)
     {
         TreeNode a =new TreeNode();
-        
+
     }
 
     private boolean dfs(TreeNode node, int depth, int x, int y) {
